@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme {
+  --color-youtube-red: #FF0000;
+  --color-youtube-darkBg: #0f0f0f;
+  --color-youtube-darkCard: #1f1f1f;
+  --color-youtube-darkText: #f1f1f1;
+  --color-youtube-darkSecondary: #aaaaaa;
+  --color-youtube-darkHover: #272727;
+  --color-youtube-lightBg: #f9f9f9;
+  --color-youtube-lightCard: #ffffff;
+  --color-youtube-lightText: #0f0f0f;
+  --color-youtube-lightSecondary: #606060;
+  --color-youtube-lightHover: #f2f2f2;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-youtube-lightBg);
+    color: var(--color-youtube-lightText);
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 200ms;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body.dark {
+    background-color: var(--color-youtube-darkBg);
+    color: var(--color-youtube-darkText);
+  }
+}
